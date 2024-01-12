@@ -18,7 +18,7 @@ const courses = [
     },
     {
         id: 2,
-        title: "Web Development Bootcamp",
+        title: "Web Development",
         courseNumber: 2,
         accessibility: 'On-site',
         courseStart: '2 months',
@@ -26,7 +26,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: ''
+                src: 'assets\images\Web Development.jpg'
             }
         ]
     },
@@ -40,13 +40,13 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: ''
+                src: 'assets\images\Data Science.jpg'
             }
         ]
     },
     {
         id: 4,
-        title: "Graphic Design Workshop",
+        title: "Graphic Design Course",
         courseNumber: 4,
         accessibility: 'On-site',
         courseStart: '1 month',
@@ -54,7 +54,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: ''
+                src: 'assets\images\Graphic Design Course.jpg'
             }
         ]
     },
@@ -68,7 +68,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: ''
+                src: 'assets\images\Mobile App Development.jpg'
             }
         ]
     },
@@ -82,7 +82,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: ''
+                src: 'assets\images\Photography Basics.jpg'
             }
         ]
     },
@@ -96,7 +96,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: ''
+                src: 'assets\images\Business Management Essentials.jpg'
             }
         ]
     },
@@ -110,7 +110,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: ''
+                src: 'assets\images\Artificial Intelligence in Business (1).jpg'
             }
         ]
     },
@@ -124,7 +124,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: ''
+                src: 'assets\images\Digital Marketing Strategies.jpg'
             }
         ]
     },
@@ -138,7 +138,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: ''
+                src: 'assets\images\UXUI Design Principles.jpg'
             }
         ]
     }
