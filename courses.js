@@ -4,10 +4,10 @@ const courses = [
 
     {
         id: 1,
-        title: "blockchain dev course",
+        title: "Blockchain dev course",
         courseNumber: 1,
-        accesability: 'distance',
-        Course_start: '3 months',
+        accesaibility: 'distance',
+        CourseStart: '3 months',
         info: 'Classroom or distance',
         image_src: [
             {
