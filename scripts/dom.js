@@ -1,67 +1,62 @@
-import { courses } from "./courses.js";
+
 const createCourseCard = (course) => {
     const div = document.createElement('div');
     div.classList.add('course-image')
-    div.appendChild(createCourseImage(courses.imageUrl, courses.id))
-    div.appendChild(createCourseInfo(courses))
+    div.appendChild(createCourseImage(course.imageUrl, course.id))
+    div.appendChild(createCourseInfo(course))
     return div;
 }
 
 const createCourseImage = (imageUrl, id) => {
     console.log(imageUrl);
     const image = document.createElement('img');
-    image.setAttribute('src', "assets\images\Artificial Intelligence in Business (1).jpg");
+    image.setAttribute('src', `${imageUrl}`);
     image.setAttribute('id', id);
 
     return image;
 };
 
-const createCourseInfo = (courses) => {
-    const paragraph = document.createElement('p');
-    paragraph.appendChild(
-        document.createTextNode(`${courses.title} ${courses.courseNumber}`)
-    );
-
-    return paragraph;
-};
-
-const createCourseList = (courses, element) => {
-    courses.forEach((courses) => {
-        const container = createDiv();
-        container.setAttribute('courseid', courses.id)
-        container.appendChild(createSpan(courses.title))
-        container.appendChild(createSpan(courses.courseNumber))
-        container.appendChild(createSpan(courses.accessibility))
-        container.appendChild(createSpan(courses.courseStart))
-        container.appendChild(createSpan(courses.info))
-        element.appendChild(container);
-    })
+const createCourseInfo = (course) => {
+    const span = document.createElement('span');
+    span.innerText = `${course.title} ${course.courseNumber} ${course.accessibility} ${course.courseStart} ${course.info}`;
+    return span;
 }
+// const createCourseList = (courses, element) => {
+
+//     courses.forEach((course) => {
+//         const container = createDiv();
+//         container.setAttribute('courseid', course.id)
+//         container.appendChild(createSpan(course.title))
+//         container.appendChild(createSpan(course.courseNumber))
+//         container.appendChild(createSpan(course.accessibility))
+//         container.appendChild(createSpan(course.courseStart))
+//         container.appendChild(createSpan(course.info))
+//         element.appendChild(container);
+//     })
+
+// }
 
 
-const createDiv = () => {
-    return document.createElement('div')
-}
+// const createDiv = () => {
+//     return document.createElement('div')
+// }
 
-const createSpan = (text) => {
-    const span = document.createElement('span')
-    span.innerText = text;
-    return span
-}
+// const createSpan = (text) => {
+//     const span = document.createElement('span')
+//     span.innerText = text;
+//     return span
+// }
 
 const addCourseImage = (image) => {
-    const imageDetails = [];
-
     image.forEach((image) => {
         const src = image.getAttribute('src')
         const courseId = image.getAttribute('id')
-        console.log('Image source:', src);
-        console.log('Course ID:', courseId);
 
-        imageDetails.push({ src, courseId })
+        image.addEventListener('click', () => {
+            alert(`Kursens id är ${courseId}, kursens bildkälla är: ${src}`);
+        });
     })
-    return imageDetails
 }
 
 
-export { createCourseCard, createCourseImage, createCourseList, addCourseImage }
+export { createCourseCard, createCourseImage, addCourseImage}

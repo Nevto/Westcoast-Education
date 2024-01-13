@@ -7,7 +7,7 @@ const courses = [
         title: "Blockchain dev course",
         courseNumber: 1,
         accessibility: 'distance',
-        CourseStart: '3 months',
+        courseStart: '3 months',
         info: 'Classroom or distance',
         imageUrl: "assets/images/Blockchain.jpg"
     },
@@ -94,6 +94,7 @@ const courses = [
     }
 
 ]
-// console.log(courses);
 
-export {courses}
+const listAllCourses = () => courses
+
+export default listAllCourses
