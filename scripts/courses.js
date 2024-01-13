@@ -6,7 +6,7 @@ const courses = [
         id: 1,
         title: "Blockchain dev course",
         courseNumber: 1,
-        accesaibility: 'distance',
+        accessibility: 'distance',
         CourseStart: '3 months',
         info: 'Classroom or distance',
         image_src: [
@@ -145,3 +145,5 @@ const courses = [
 
 ]
 console.log(courses);
+
+export {courses}
