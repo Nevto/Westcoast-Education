@@ -9,12 +9,7 @@ const courses = [
         accessibility: 'distance',
         CourseStart: '3 months',
         info: 'Classroom or distance',
-        image_src: [
-            {
-                alt: 'A spiraling blockchain item that symbolizes tokens such as eth, btc and much more',
-                src: "assets/images/Blockchain.jpg"
-            }
-        ]
+        imageUrl: "assets/images/Blockchain.jpg"
     },
     {
         id: 2,
@@ -23,12 +18,7 @@ const courses = [
         accessibility: 'On-site',
         courseStart: '2 months',
         info: 'Classroom',
-        image_src: [
-            {
-                alt: '',
-                src: 'assets/images/Web Development.jpg'
-            }
-        ]
+        imageUrl: 'assets/images/Web Development.jpg'
     },
     {
         id: 3,
@@ -37,12 +27,7 @@ const courses = [
         accessibility: 'Distance',
         courseStart: '4 months',
         info: 'Online',
-        image_src: [
-            {
-                alt: '',
-                src: 'assets/images/Data Science.jpg'
-            }
-        ]
+        imageUrl: 'assets/images/Data Science.jpg'
     },
     {
         id: 4,
@@ -51,12 +36,7 @@ const courses = [
         accessibility: 'On-site',
         courseStart: '1 month',
         info: 'Classroom',
-        image_src: [
-            {
-                alt: '',
-                src: 'assets/images/Graphic Design Course.jpg'
-            }
-        ]
+        imageUrl: 'assets/images/Graphic Design Course.jpg'
     },
     {
         id: 5,
@@ -65,12 +45,7 @@ const courses = [
         accessibility: 'Distance',
         courseStart: '3 months',
         info: 'Online',
-        image_src: [
-            {
-                alt: '',
-                src: 'assets/images/Mobile App Development.jpg'
-            }
-        ]
+        imageUrl: 'assets/images/Mobile App Development.jpg'
     },
     {
         id: 6,
@@ -79,12 +54,7 @@ const courses = [
         accessibility: 'On-site',
         courseStart: '1.5 months',
         info: 'Classroom',
-        image_src: [
-            {
-                alt: '',
-                src: 'assets/images/Photography Basics.jpg'
-            }
-        ]
+        imageUrl: 'assets/images/Photography Basics.jpg'
     },
     {
         id: 7,
@@ -93,12 +63,7 @@ const courses = [
         accessibility: 'Distance',
         courseStart: '2.5 months',
         info: 'Online',
-        image_src: [
-            {
-                alt: '',
-                src: 'assets/images/Business Management Essentials.jpg'
-            }
-        ]
+        imageUrl: 'assets/images/Business Management Essentials.jpg'
     },
     {
         id: 8,
@@ -107,12 +72,7 @@ const courses = [
         accessibility: 'On-site',
         courseStart: '3 months',
         info: 'Classroom',
-        image_src: [
-            {
-                alt: '',
-                src: 'assets/images/Artificial Intelligence in Business (1).jpg'
-            }
-        ]
+        imageUrl: 'assets/images/Artificial Intelligence in Business (1).jpg'
     },
     {
         id: 9,
@@ -121,12 +81,7 @@ const courses = [
         accessibility: 'Distance',
         courseStart: '2 months',
         info: 'Online',
-        image_src: [
-            {
-                alt: '',
-                src: 'assets/images/Digital Marketing Strategies.jpg'
-            }
-        ]
+        imageUrl: 'assets/images/Digital Marketing Strategies.jpg'
     },
     {
         id: 10,
@@ -135,12 +90,7 @@ const courses = [
         accessibility: 'On-site',
         courseStart: '2 months',
         info: 'Classroom',
-        image_src: [
-            {
-                alt: '',
-                src: 'assets/images/UXUI Design Principles.jpg'
-            }
-        ]
+        imageUrl: 'assets/images/UXUI Design Principles.jpg'
     }
 
 ]

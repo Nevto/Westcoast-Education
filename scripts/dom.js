@@ -1,16 +1,17 @@
 import { courses } from "./courses.js";
-const createCourseCard = (courses) => {
+const createCourseCard = (course) => {
     const div = document.createElement('div');
-    div.appendChild(createCourseImage(courses.image_src, courses.id))
+    div.classList.add('course-image')
+    div.appendChild(createCourseImage(courses.imageUrl, courses.id))
     div.appendChild(createCourseInfo(courses))
     return div;
 }
 
-const createCourseImage = (imageSrc, id) => {
+const createCourseImage = (imageUrl, id) => {
+    console.log(imageUrl);
     const image = document.createElement('img');
-    console.log(imageSrc);
-    image.setAttribute('src', courses.image_src[0].src);
-    image.setAttribute('id', courses.image_src[0].alt);
+    image.setAttribute('src', "assets\images\Artificial Intelligence in Business (1).jpg");
+    image.setAttribute('id', id);
 
     return image;
 };
@@ -56,8 +57,8 @@ const addCourseImage = (image) => {
         const courseId = image.getAttribute('id')
         console.log('Image source:', src);
         console.log('Course ID:', courseId);
-        
-        imageDetails.push({ src, courseId})
+
+        imageDetails.push({ src, courseId })
     })
     return imageDetails
 }

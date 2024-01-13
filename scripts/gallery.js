@@ -4,9 +4,9 @@ const gallery = document.querySelector('#courseGallery')
 
 
 courses.forEach((course) => {
-    console.log('image source', course.image_src[0].src);
-    gallery.appendChild(createCourseCard(course.image_src[0].src, course.id))
-
+    console.log('image source', course.imageUrl);
+    gallery.appendChild(createCourseCard(courses.title, courses.id))
+    gallery.appendChild(createCourseImage(courses))
 })
 
 const images = document.querySelectorAll('.imageGallery')
