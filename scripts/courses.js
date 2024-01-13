@@ -12,7 +12,7 @@ const courses = [
         image_src: [
             {
                 alt: 'A spiraling blockchain item that symbolizes tokens such as eth, btc and much more',
-                src: "assets\images\Blockchain.jpg"
+                src: "assets/images/Blockchain.jpg"
             }
         ]
     },
@@ -26,7 +26,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: 'assets\images\Web Development.jpg'
+                src: 'assets/images/Web Development.jpg'
             }
         ]
     },
@@ -40,7 +40,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: 'assets\images\Data Science.jpg'
+                src: 'assets/images/Data Science.jpg'
             }
         ]
     },
@@ -54,7 +54,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: 'assets\images\Graphic Design Course.jpg'
+                src: 'assets/images/Graphic Design Course.jpg'
             }
         ]
     },
@@ -68,7 +68,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: 'assets\images\Mobile App Development.jpg'
+                src: 'assets/images/Mobile App Development.jpg'
             }
         ]
     },
@@ -82,7 +82,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: 'assets\images\Photography Basics.jpg'
+                src: 'assets/images/Photography Basics.jpg'
             }
         ]
     },
@@ -96,7 +96,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: 'assets\images\Business Management Essentials.jpg'
+                src: 'assets/images/Business Management Essentials.jpg'
             }
         ]
     },
@@ -110,7 +110,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: 'assets\images\Artificial Intelligence in Business (1).jpg'
+                src: 'assets/images/Artificial Intelligence in Business (1).jpg'
             }
         ]
     },
@@ -124,7 +124,7 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: 'assets\images\Digital Marketing Strategies.jpg'
+                src: 'assets/images/Digital Marketing Strategies.jpg'
             }
         ]
     },
@@ -138,12 +138,12 @@ const courses = [
         image_src: [
             {
                 alt: '',
-                src: 'assets\images\UXUI Design Principles.jpg'
+                src: 'assets/images/UXUI Design Principles.jpg'
             }
         ]
     }
 
 ]
-console.log(courses);
+// console.log(courses);
 
 export {courses}
