@@ -1,2 +1,13 @@
-@import "reset";
-@import "gallery";
+@import "reset.scss";
+@import "gallery.scss";
+
+.course-image {
+        background-color: red;
+    }
+    
+    #container {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        flex-direction: row;
+    }

@@ -52,5 +52,16 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .course-image {
-  background-color: lightblue;
+  background-color: purple;
+}
+
+.course-image {
+  background-color: red;
+}
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  flex-direction: row;
 }/*# sourceMappingURL=main.css.map */
