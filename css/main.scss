@@ -2,12 +2,65 @@
 @import "gallery.scss";
 
 .course-image {
-        background-color: red;
-    }
-    
+    background-color: beige;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#courseGallery {
+    display: flex;
+    height: 300px;
+    width: 80vw;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 10px;
+}
+
+.course-image {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+    border-radius: 15px;
+}
+
+.course-image img {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 15px;
+}
+
+.course-image span {
+    padding: 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+
     #container {
-        display: flex;
-        justify-content: space-between;
-        width: 300px;
-        flex-direction: row;
+        width: 100vw;
     }
+
+    #courseGallery div {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100vh;
+    }
+
+    .course-image {
+        width: 80vh;
+        justify-content: space-between;
+    }
+
+    .course-image img {
+        width: 50vw;
+        height: 50vh;
+    }
+}
