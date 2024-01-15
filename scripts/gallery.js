@@ -1,6 +1,7 @@
 import { addCourseImage, createCourseCard,} from "./dom.js";
 import listAllCourses from "./courses.js";
 import HttpClient from "./http.js";
+
 const gallery = document.querySelector('#courseGallery')
 
 
@@ -12,7 +13,6 @@ async function initpage() {
     })
     const images = document.querySelectorAll('.course-image img')
     addCourseImage(images);
-    console.log();
 }
 
 const loadCourses = async () => {
