@@ -18,7 +18,7 @@ const createCourseImage = (imageUrl, id) => {
 
 const createCourseInfo = (course) => {
     const span = document.createElement('span');
-    span.innerText = `${course.title} ${course.courseNumber} ${course.accessibility} ${course.courseStart} ${course.info}`;
+    span.innerText = `${course.title} ${course.courseNumber} ${course.description} ${course.accessibility} ${course.date} ${course.months}`;
     return span;
 }
 // const createCourseList = (courses, element) => {
