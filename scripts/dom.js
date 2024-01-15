@@ -8,7 +8,7 @@ const createCourseCard = (course) => {
 }
 
 const createCourseImage = (imageUrl, id) => {
-    console.log(imageUrl);
+    // console.log(imageUrl);
     const image = document.createElement('img');
     image.setAttribute('src', `${imageUrl}`);
     image.setAttribute('id', id);
