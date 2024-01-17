@@ -4,7 +4,7 @@ const createCourseCard = (course) => {
     div.classList.add('course-image')
     div.appendChild(createCourseImage(course.imageUrl, course.id))
     div.appendChild(createCourseInfo(course))
-    div.appendChild(createBookCourse())
+    div.appendChild(createBookCourse(course.courseNumber, course.id))
     return div;
 }
 
@@ -23,12 +23,25 @@ const createCourseInfo = (course) => {
     return span;
 }
 
-const createBookCourse = () => {
+const createBookCourse = (courseNumber, id) => {
     const button = document.createElement('button');
-    button.setAttribute('id', 'bookButton')
+    
+    button.classList.add('bookButton')
+    button.setAttribute('id', id)
+    button.setAttribute('courseNumber', `${courseNumber}`)
+
+    // const cN = button.getAttribute('courseNumber')
+    // const getId = button.getAttribute('id')
+
     button.innerText = 'Book Course'
+    button.addEventListener('click', () => {
+        alert(`ID är ${id} kursnummer är ${courseNumber}`);
+    })
     return button
 }
+
+
+
 // const createCourseList = (courses, element) => {
 
 //     courses.forEach((course) => {
@@ -67,4 +80,4 @@ const addCourseImage = (image) => {
 }
 
 
-export { createCourseCard, createCourseImage, addCourseImage}
+export { createCourseCard, createCourseImage, addCourseImage,}
