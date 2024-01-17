@@ -4,6 +4,7 @@ const createCourseCard = (course) => {
     div.classList.add('course-image')
     div.appendChild(createCourseImage(course.imageUrl, course.id))
     div.appendChild(createCourseInfo(course))
+    div.appendChild(createBookCourse())
     return div;
 }
 
@@ -20,6 +21,13 @@ const createCourseInfo = (course) => {
     const span = document.createElement('span');
     span.innerText = `${course.title} ${course.courseNumber} ${course.description} ${course.accessibility} ${course.date} ${course.months}`;
     return span;
+}
+
+const createBookCourse = () => {
+    const button = document.createElement('button');
+    button.setAttribute('id', 'bookButton')
+    button.innerText = 'Book Course'
+    return button
 }
 // const createCourseList = (courses, element) => {
 

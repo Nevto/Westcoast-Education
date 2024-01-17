@@ -42,6 +42,18 @@
     padding: 5px;
 }
 
+#bookButton {
+    width: 10rem;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    position: relative;
+    bottom: 0;
+    align-self:flex-end;
+    margin: 3px;
+    border-radius: 15px;
+}
+
 @media only screen and (max-width: 1024px) {
 
     #container {
