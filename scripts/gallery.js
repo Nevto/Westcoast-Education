@@ -1,6 +1,6 @@
-import { addCourseImage, createCourseCard,} from "./dom.js";
-import listAllCourses from "./courses.js";
+import { addCourseImage, createCourseCard, createLogInForm, createBookCourse} from "./dom.js";
 import HttpClient from "./http.js";
+
 
 const gallery = document.querySelector('#courseGallery')
 
@@ -10,10 +10,20 @@ async function initpage() {
 
     courses.forEach((course) => {
         gallery.appendChild(createCourseCard(course));
+
     })
     const images = document.querySelectorAll('.course-image img')
     addCourseImage(images);
-}
+    // const bookButton = createBookCourse(courses.courseNumber, courses.id, (showLogInForm))
+    
+    // const bookYourCourse = courses[0]
+    
+    
+    
+    // createLogInForm(bookYourCourse)
+} 
+
+const bookyourCourse = document.querySelectorAll('.bookButton')
 
 const loadCourses = async () => {
     const url = 'http://localhost:3000/courses';
@@ -22,7 +32,12 @@ const loadCourses = async () => {
     return courses;
 }
 
+const showLogInForm = async (course) =>{
+    const logInForm = createLogInForm(course);
+    document.body.appendChild(logInForm)
+}
 
+showLogInForm(bookyourCourse)
 document.addEventListener('DOMContentLoaded', initpage)
 
 

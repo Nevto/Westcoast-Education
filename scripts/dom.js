@@ -25,13 +25,10 @@ const createCourseInfo = (course) => {
 
 const createBookCourse = (courseNumber, id) => {
     const button = document.createElement('button');
-    
+
     button.classList.add('bookButton')
     button.setAttribute('id', id)
     button.setAttribute('courseNumber', `${courseNumber}`)
-
-    // const cN = button.getAttribute('courseNumber')
-    // const getId = button.getAttribute('id')
 
     button.innerText = 'Book Course'
     button.addEventListener('click', () => {
@@ -40,33 +37,33 @@ const createBookCourse = (courseNumber, id) => {
     return button
 }
 
+const createLogInForm = (course) => {
+    const formData = document.createElement('div') // kundnamn, Faktureringsadress, e-post, mobilnummer
+    formData.innerHTML = `
+    <section class= "formData">
+        <h2>${course.title}</h2>
+        <form>
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Enter your name" required>
+
+            <label for="billingAddress">Billing Address:</label>
+            <textarea id="billingAddress" name="billingAddress" placeholder="Enter billing address" required></textarea>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Enter mobile number" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+  `
+
+    document.body.appendChild(formData)
+}
 
 
-// const createCourseList = (courses, element) => {
-
-//     courses.forEach((course) => {
-//         const container = createDiv();
-//         container.setAttribute('courseid', course.id)
-//         container.appendChild(createSpan(course.title))
-//         container.appendChild(createSpan(course.courseNumber))
-//         container.appendChild(createSpan(course.accessibility))
-//         container.appendChild(createSpan(course.courseStart))
-//         container.appendChild(createSpan(course.info))
-//         element.appendChild(container);
-//     })
-
-// }
-
-
-// const createDiv = () => {
-//     return document.createElement('div')
-// }
-
-// const createSpan = (text) => {
-//     const span = document.createElement('span')
-//     span.innerText = text;
-//     return span
-// }
 
 const addCourseImage = (image) => {
     image.forEach((image) => {
@@ -80,4 +77,4 @@ const addCourseImage = (image) => {
 }
 
 
-export { createCourseCard, createCourseImage, addCourseImage,}
+export { createCourseCard, createCourseImage, addCourseImage, createLogInForm, createBookCourse }
