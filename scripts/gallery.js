@@ -14,22 +14,17 @@ async function initpage() {
     })
     const images = document.querySelectorAll('.course-image img')
     addCourseImage(images);
-    // const bookButton = createBookCourse(courses.courseNumber, courses.id, (showLogInForm))
-
-    // const bookYourCourse = courses[0]
 
     const logInButtons = document.querySelectorAll('.bookButton');
-
+    console.log(logInButtons);
     logInButtons.forEach((logInButton) => {
         logInButton.addEventListener('click', () => {
-            const courseId = logInButton.getAttribute('id');
+            const courseTitle = logInButton.getAttribute('title');
             window.location.href = ('addUser.html')
-
-            showLogInForm(courseId);
+            showLogInForm(courseTitle);
+            console.log(courseId);
         });
     });
-
-    // createLogInForm(bookYourCourse)
 }
 
 const loadCourses = async () => {

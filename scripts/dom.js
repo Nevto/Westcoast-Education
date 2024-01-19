@@ -1,10 +1,9 @@
-import HttpClient from "./http.js";
 const createCourseCard = (course) => {
     const div = document.createElement('div');
     div.classList.add('course-image')
     div.appendChild(createCourseImage(course.imageUrl, course.id))
     div.appendChild(createCourseInfo(course))
-    div.appendChild(createBookCourse(course.courseNumber, course.id))
+    div.appendChild(createBookCourse(course.title, course.id))
     return div;
   
 }
@@ -20,7 +19,7 @@ const createCourseImage = (imageUrl, id) => {
 
 const createCourseInfo = (course) => {
     const span = document.createElement('span');
-    span.innerText = `${course.title} ${course.courseNumber} ${course.description} ${course.accessibility} ${course.date} ${course.months}`;
+    span.innerText = `${course.title} ${course.courseNumber} ${course.description} ${course.accessibility} Course start: ${course.date} Duration: ${course.months} months`;
     return span;
 }
 
@@ -40,6 +39,7 @@ const createBookCourse = (courseTitle, id, courseNumber) => {
 
 const createLogInForm = (course) => {
     const formData = document.createElement('div') // kundnamn, Faktureringsadress, e-post, mobilnummer
+    console.log(course);
     // const courseTitle = `${course.title}`
     formData.innerHTML = `
     <section class= "formData">
@@ -48,8 +48,8 @@ const createLogInForm = (course) => {
     <label for="studentName">Student Name:</label>
     <input type="text" id="studentName" name="studentName" placeholder="Enter your name" required>
     
-    <label for="billingAddress">Billing Address:</label>
-    <textarea id="billingAddress" name="billingAddress" placeholder="Enter billing address" required></textarea>
+    <label for="Adress">Address:</label>
+    <textarea id="Address" name="Address" placeholder="Enter address" required></textarea>
     
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" placeholder="Enter email address" required>
