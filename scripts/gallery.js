@@ -20,9 +20,9 @@ async function initpage() {
     logInButtons.forEach((logInButton) => {
         logInButton.addEventListener('click', () => {
             const courseTitle = logInButton.getAttribute('title');
-            window.location.href = ('addUser.html')
-            showLogInForm(courseTitle);
-            console.log(courseId);
+            // Makes the form appear in the right container
+            const container = logInButton.closest('.course-image')
+            showLogInForm(courseTitle, container);
         });
     });
 }
@@ -34,9 +34,10 @@ const loadCourses = async () => {
     return courses;
 }
 
-const showLogInForm = async (course) => {
-    const logInForm = createLogInForm(course);
-    document.body.appendChild(logInForm)
+
+const showLogInForm = async (course, container) => {
+   const logInForm = createLogInForm(course)
+   container.appendChild(logInForm)
 }
 
 
