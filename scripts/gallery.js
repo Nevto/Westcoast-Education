@@ -1,6 +1,6 @@
 import { addCourseImage, createCourseCard, createLogInForm, createBookCourse } from "./dom.js";
 import HttpClient from "./http.js";
-import { saveStudentHandler } from "./addUser.js";
+import { addStudentToJson, saveStudentHandler } from "./addUser.js";
 
 
 const gallery = document.querySelector('#courseGallery')
@@ -43,7 +43,7 @@ const showLogInForm = async (course, container) => {
    const form = logInForm.querySelector('form')
    form.addEventListener('submit', (e) => {
     e.preventDefault();
-    saveStudentHandler(form)
+    addStudentToJson(form)
    })
 }
 

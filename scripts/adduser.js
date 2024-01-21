@@ -1,3 +1,5 @@
+import HttpClient from "./http.js";
+
 const addStudent = (formData) => {
     //checks if the storage feature is supported by the current webbrowser
     if (typeof Storage !== 'undefined') {
@@ -19,6 +21,18 @@ const addStudent = (formData) => {
     }
 }
 
+const addStudentToServer = async (formData) => {
+    try {
+        const url = 'http://localhost:3000/studentcourses';
+        const http = new HttpClient(url);
+        const result = await http.add(formData);
+        alert('Form data saved successfully to server');
+        return result.id;
+    } catch (error) {
+        console.log('Something went wrong when saving to the server', error);
+    }
+}
+
 //takes my form data and stores it local storage
 const saveStudentHandler = (form) => {
     const formData = {
@@ -31,7 +45,15 @@ const saveStudentHandler = (form) => {
 
     console.log('Form data submitted:', formData);
     addStudent(formData)
+    addStudentToServer(formData)
 };
 
+const addStudentToJson = async (form) => {
+    const data = saveStudentHandler(form);
+    const studentId = await addStudentToServer(data);
 
-export { saveStudentHandler }
+    console.log('everything is done', data);
+}
+
+
+export { saveStudentHandler, addStudentToJson }
