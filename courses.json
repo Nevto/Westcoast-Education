@@ -122,8 +122,16 @@
       "months": "36",
       "courseCost": "3000",
       "id": 3
+    },
+    {
+      "courseTitle": "Blockchain for dummies",
+      "courseNumber": "13",
+      "months": "36",
+      "courseCost": "3000",
+      "id": 4
     }
   ],
+  
   "students": [
     {
       "id": 1,
@@ -131,23 +139,15 @@
       "adress": "Knutknutsson Gatan 35",
       "email": "knut@knut.com",
       "mobileNumber": 699099099,
-      "courseId": 1
+      "courseTitle": "Blockchain for dummies"
     },
     {
-      "studentName": "dwd",
-      "address": "Carl Grimbergsgatan 23 Lgh 1302",
-      "email": "Jonathannorberg95@gmail.com",
-      "mobileNumber": "0709680045",
-      "courseId": "Blockchain Dev Course",
+      "studentName": "Bertil",
+      "address": "test@test",
+      "email": "test@123",
+      "mobileNumber": "333333",
+      "courseTitle": "Data Science Fundamentals",
       "id": 2
-    },
-    {
-      "studentName": "Göran",
-      "address": "Carl Grimbergsgatan 23 Lgh 1302",
-      "email": "Jonathannorberg95@gmail.com",
-      "mobileNumber": "0709680045",
-      "courseId": "Blockchain Dev Course",
-      "id": 3
     }
   ]
 }

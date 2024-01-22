@@ -1,5 +1,5 @@
 import { addCourseToJson } from "./addUser.js";
-import { navigation } from "./changeurl.js";
+import { navigation } from "./changeUrl.js";
 import { createNewCourse } from "./dom.js";
 
 async function initpage()  {

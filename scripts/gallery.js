@@ -1,7 +1,7 @@
 import { addCourseImage, createCourseCard, createLogInForm, createBookCourse } from "./dom.js";
 import HttpClient from "./http.js";
 import { addStudentToJson, saveStudentHandler } from "./addUser.js";
-import { navigation } from "./changeurl.js";
+import { navigation } from "./changeUrl.js";
 
 
 const gallery = document.querySelector('#courseGallery')

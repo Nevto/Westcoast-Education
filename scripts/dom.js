@@ -57,8 +57,8 @@ const createLogInForm = (course) => {
     <label for="mobileNumber">Mobile Number:</label>
     <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Enter mobile number" required>
     
-    <label for="CourseId">Course ID:</label>
-    <input type="text" id="courseId" name="courseId" placeholder="" value="${course}"  required>
+    <label for="courseTitle">Chosen course:</label>
+    <input type="text" id="courseTitle" name="courseTitle" placeholder="" value="${course}"  required>
     
     <button type="submit">Book my course!</button>
     </form>
