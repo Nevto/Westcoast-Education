@@ -67,6 +67,31 @@ const createLogInForm = (course) => {
     return formData;
 }
 
+const createNewCourse = () => {
+    const newCourse = document.createElement('div')
+    `
+    <section class= "newCourse">
+    <h2>"Here you may add new courses!"</h2>
+    <form>
+    <label for="CourseTitle">Course Title:</label>
+    <input type="text" id="courseTitle" name="courseTitle" placeholder="Enter name of new course" required>
+    
+    <label for="courseNumber">Address:</label>
+    <input type="text" id="courseNumber" name="courseNumber" placeholder="Enter new Coursenumber" required>
+    
+    <label for="months">Duration:</label>
+    <input type="text" id="months" name="months" placeholder="Enter how many months the course will be" required>
+    
+    <label for="courseCost">Course Cost:</label>
+    <input type="text" id="courseCost" name="courseCost" placeholder="Price of Course" required>
+    
+    <button type="submit">Create new Course</button>
+    </form>
+    </section>
+    `
+    return newCourse
+}
+
 
 
 
