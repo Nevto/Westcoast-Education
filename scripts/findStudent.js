@@ -1,7 +1,8 @@
 import HttpClient from "./http.js"
-import { createStudentCard, addCourseImage } from "./dom.js";
+import { createStudentCard, addCourseImage, createStudentImage } from "./dom.js";
+import { navigation } from "./changeurl.js";
 
-const gallery = document.querySelector('#studentContainer')
+const gallery = document.querySelector('#container')
 
 
 const initPage = async () => {
@@ -12,7 +13,7 @@ const initPage = async () => {
     })
     
     const images = document.querySelectorAll('.course-image img')
-        addCourseImage(images);
+        createStudentImage(images);
   };
 
   
@@ -31,5 +32,7 @@ const initPage = async () => {
         return []
       }
     }
+
+    navigation()
     
 document.addEventListener('DOMContentLoaded', initPage);

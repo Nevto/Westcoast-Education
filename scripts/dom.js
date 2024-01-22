@@ -13,6 +13,7 @@ const createStudentCard = (student) => {
     div.classList.add('course-image')
     // div.appendChild(createCourseImage(course.imageUrl, course.id))
     div.appendChild(createStudentInfo(student))
+    div.appendChild(createStudentImage(student.img, student.id))
     return div;
   
 }
@@ -22,6 +23,15 @@ const createStudentInfo = (students) => {
     span.innerText = `${students.studentName} ${students.adress} ${students.email} ${students.mobileNumber} ${students.courseTitle}`
     return span;
 }
+
+const createStudentImage = (img, id) => {
+    // console.log(imageUrl);
+    const image = document.createElement('img');
+    image.setAttribute('src', `${img}`);
+    image.setAttribute('id', id);
+
+    return image;
+};
 
 const createCourseImage = (imageUrl, id) => {
     // console.log(imageUrl);
@@ -123,4 +133,4 @@ const addCourseImage = (image) => {
 }
 
 
-export { createCourseCard, createCourseImage, addCourseImage, createLogInForm, createBookCourse, createNewCourse, createStudentCard }
+export { createCourseCard, createCourseImage, addCourseImage, createLogInForm, createBookCourse, createNewCourse, createStudentCard, createStudentImage }
