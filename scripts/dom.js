@@ -58,7 +58,7 @@ const createLogInForm = (course) => {
     <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Enter mobile number" required>
     
     <label for="CourseId">Course ID:</label>
-    <input type="text" id="courseId" name="courseId" placeholder="Choosen course, and it's Id" required>
+    <input type="text" id="courseId" name="courseId" placeholder="" value="${course}"  required>
     
     <button type="submit">Book my course!</button>
     </form>
@@ -71,7 +71,7 @@ const createNewCourse = () => {
     const newCourse = document.createElement('div')
 
     newCourse.innerHTML = `
-    <section class= "newCourse">
+    <section class= "newCourseForm" id = "addCourse">
     <h2>"Here you may add new courses!"</h2>
     <form>
     <label for="CourseTitle">Course Title:</label>
@@ -86,7 +86,7 @@ const createNewCourse = () => {
     <label for="courseCost">Course Cost:</label>
     <input type="text" id="courseCost" name="courseCost" placeholder="Price of Course" required>
     
-    <button type="submit">Create new Course</button>
+    <button class="bookButton" type="submit">Create new Course</button>
     </form>
     </section>
     `

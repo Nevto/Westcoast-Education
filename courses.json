@@ -125,6 +125,14 @@
       "email": "knut@knut.com",
       "mobileNumber": 699099099,
       "courseId": 1
+    },
+    {
+      "studentName": "dwd",
+      "address": "Carl Grimbergsgatan 23 Lgh 1302",
+      "email": "Jonathannorberg95@gmail.com",
+      "mobileNumber": "0709680045",
+      "courseId": "Blockchain Dev Course",
+      "id": 2
     }
   ]
 }

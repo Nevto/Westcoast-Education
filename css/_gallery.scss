@@ -1,0 +1,19 @@
+
+
+.newCourseForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80vw;
+    
+}
+
+.newCourseForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.bookButton {
+    align-self: center;
+}
