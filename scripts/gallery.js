@@ -1,6 +1,7 @@
 import { addCourseImage, createCourseCard, createLogInForm, createBookCourse } from "./dom.js";
 import HttpClient from "./http.js";
 import { addStudentToJson, saveStudentHandler } from "./addUser.js";
+import { navigation } from "./changeurl.js";
 
 
 const gallery = document.querySelector('#courseGallery')
@@ -48,6 +49,7 @@ const showLogInForm = async (course, container) => {
 }
 
 
+navigation()
 
 
 console.log(showLogInForm);

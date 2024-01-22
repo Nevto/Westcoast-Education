@@ -115,6 +115,13 @@
       "months": "24",
       "courseCost": "3000",
       "id": 2
+    },
+    {
+      "courseTitle": "Javascript for pros",
+      "courseNumber": "13",
+      "months": "36",
+      "courseCost": "3000",
+      "id": 3
     }
   ],
   "students": [
@@ -133,6 +140,14 @@
       "mobileNumber": "0709680045",
       "courseId": "Blockchain Dev Course",
       "id": 2
+    },
+    {
+      "studentName": "Göran",
+      "address": "Carl Grimbergsgatan 23 Lgh 1302",
+      "email": "Jonathannorberg95@gmail.com",
+      "mobileNumber": "0709680045",
+      "courseId": "Blockchain Dev Course",
+      "id": 3
     }
   ]
 }

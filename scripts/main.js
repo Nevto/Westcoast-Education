@@ -1,4 +1,5 @@
 import { addCourseToJson } from "./addUser.js";
+import { navigation } from "./changeurl.js";
 import { createNewCourse } from "./dom.js";
 
 async function initpage()  {
@@ -13,9 +14,7 @@ newCourse.addEventListener('submit', (e) => {
     e.preventDefault();
     addCourseToJson(newCourse);
 })
-
-
-
-
+ 
+navigation()
 
 document.addEventListener('DOMContentLoaded', initpage)
