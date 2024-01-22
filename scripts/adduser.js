@@ -23,7 +23,7 @@ const addStudent = (formData) => {
 
 const addStudentToServer = async (formData) => {
     try {
-        const url = 'http://localhost:3000/studentcourses';
+        const url = 'http://localhost:3000/students';
         const http = new HttpClient(url);
         const result = await http.add(formData);
         alert('Form data saved successfully to server');
