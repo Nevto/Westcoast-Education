@@ -69,14 +69,15 @@ const createLogInForm = (course) => {
 
 const createNewCourse = () => {
     const newCourse = document.createElement('div')
-    `
+
+    newCourse.innerHTML = `
     <section class= "newCourse">
     <h2>"Here you may add new courses!"</h2>
     <form>
     <label for="CourseTitle">Course Title:</label>
     <input type="text" id="courseTitle" name="courseTitle" placeholder="Enter name of new course" required>
     
-    <label for="courseNumber">Address:</label>
+    <label for="courseNumber">Course Number</label>
     <input type="text" id="courseNumber" name="courseNumber" placeholder="Enter new Coursenumber" required>
     
     <label for="months">Duration:</label>
@@ -107,4 +108,4 @@ const addCourseImage = (image) => {
 }
 
 
-export { createCourseCard, createCourseImage, addCourseImage, createLogInForm, createBookCourse }
+export { createCourseCard, createCourseImage, addCourseImage, createLogInForm, createBookCourse, createNewCourse }

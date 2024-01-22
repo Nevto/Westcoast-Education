@@ -101,6 +101,22 @@
       "date": "2024-09-01"
     }
   ],
+  "newCourses": [
+    {
+      "id": 1,
+      "courseTitle": "Javascript for proffesionals",
+      "courseNumber": 1,
+      "duration": 12,
+      "price": 30000
+    },
+    {
+      "courseTitle": "Blockchain for dummies",
+      "courseNumber": "13",
+      "months": "24",
+      "courseCost": "3000",
+      "id": 2
+    }
+  ],
   "students": [
     {
       "id": 1,
@@ -110,6 +126,5 @@
       "mobileNumber": 699099099,
       "courseId": 1
     }
-   
   ]
 }
