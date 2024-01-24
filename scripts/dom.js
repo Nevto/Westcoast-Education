@@ -11,9 +11,9 @@ const createCourseCard = (course) => {
 const createStudentCard = (student) => {
     const div = document.createElement('div');
     div.classList.add('course-image')
-    // div.appendChild(createCourseImage(course.imageUrl, course.id))
-    div.appendChild(createStudentInfo(student))
+    div.dataset.courseTitle = student.courseTitle;
     div.appendChild(createStudentImage(student.img, student.id))
+    div.appendChild(createStudentInfo(student))
     return div;
   
 }
@@ -117,7 +117,6 @@ const createNewCourse = () => {
     `
     return newCourse
 }
-
 
 
 

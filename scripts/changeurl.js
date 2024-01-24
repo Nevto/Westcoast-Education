@@ -6,7 +6,7 @@ const navigation = () => {
     const homePage = document.getElementById('homePage')
     const adminPage = document.getElementById('adminPage')
     const headerHome = document.getElementById('headerHome')
-
+    
     homePage.addEventListener('click', () => {
         goToPage('index.html')
     })
@@ -15,8 +15,17 @@ const navigation = () => {
         goToPage('addUser.html')
     })
 
+    
     headerHome.addEventListener('click', () => {
         goToPage('index.html')
     })
+
 }
-export {navigation}
+
+const adminNav = () => {
+    const adminView = document.getElementById('adminStudentView')
+    adminView.addEventListener('click', () => {
+        goToPage('adminCourses.html')
+    })
+}
+export {navigation, adminNav}

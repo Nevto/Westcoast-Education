@@ -1,3 +1,4 @@
+import { adminNav } from "./changeUrl.js";
 import HttpClient from "./http.js";
 
 // const addStudent = (formData) => {
@@ -80,5 +81,6 @@ const addCourseToJson = async (form) => {
     console.log("it should  work now", saveCourse);
 }
 
+adminNav()
 
 export { saveStudentHandler, addStudentToJson, addCourseToJson }

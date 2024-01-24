@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Westcoas Education</title>
     <link rel="stylesheet" href="/css/main.css">
-    <script src="/scripts/findStudent.js" type="module" defer></script>
+    <script src="/scripts/loadStudent.js" type="module" defer></script>
+    <script type="module" src="/scripts/findStudent.js" defer></script>
 
 
 </head>
@@ -18,14 +19,27 @@
                 <ul class="menu-buttons">
                     <li id="homePage">Home</li>
                     <li id="adminPage">Admin</li>
+                    <li id="adminStudentView">Admin-Studentview</li>
                 </ul>
+
             </nav>
-            
+
             <h1 class="title" id="headerHome">WestCoast Education</h1>
         </header>
+        <section>
+            <form id="searchForm">
+                <label for="courseTitle">Search by Course Title:</label>
+                <input type="text" id="courseTitle" name="courseTitle" placeholder="Enter course title" required>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
         <section id="container">
             <div id="courseGallery" class="imageGallery">
             </div>
+        </section>
+        <section>
+        
         </section>
     </main>
 </body>
