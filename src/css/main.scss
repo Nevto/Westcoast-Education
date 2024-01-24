@@ -46,7 +46,7 @@ body {
 
 .course-image {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     width: calc(50% - 10px);
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.75);
@@ -68,13 +68,11 @@ body {
     
 }
 
-.course-image h2 {
+.textContainer {
     display: flex;
-    position: relative;
-    justify-content: flex-end;
-    margin-right: 1.5rem;
-    bottom: 18rem;
-
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 2rem;
 }
 
 .description {
@@ -85,7 +83,7 @@ body {
 
 
 .bookButton {
-    width: 10rem;
+    width: 14rem;
     height: 2rem;
     background-color: rgba(10, 246, 231, 0.2);
     ;

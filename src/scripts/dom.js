@@ -29,8 +29,8 @@ const createCourseInfo = (course) => {
      <div><h4>Course start:</h4> <p>${course.date}</p> <h4>Duration:</h4> <p>${course.months} months</p></div></div>`;
     spanDe.innerHTML = `<h3>Description</h3> <p>${course.description}</p>`
 
-    container.appendChild(spanDe)
     container.appendChild(h2);
+    container.appendChild(spanDe)
     container.appendChild(span);
 
     return container
