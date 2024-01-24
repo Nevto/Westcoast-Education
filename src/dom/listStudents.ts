@@ -13,9 +13,15 @@ export function listStudents (students: Student[]):void {
     }
     
     const createStudentInfo = (student: Student): HTMLSpanElement => {
+        const div: HTMLDivElement = document.createElement('div')
         const span: HTMLSpanElement = document.createElement('span');
-        span.innerText = `${student.studentName} ${student.address} ${student.email} ${student.mobileNumber} ${student.courseTitle}`
-        return span;
+        const h2: HTMLHeadElement = document.createElement('h2')
+        span.innerText = `${student.studentName} ${student.address} ${student.email} ${student.mobileNumber}`
+        h2.innerText = `${student.courseTitle}`
+
+        div.appendChild(h2)
+        div.appendChild(span)
+        return div;
     }
     
     const createStudentImage = (img: string, id: string): HTMLImageElement => {

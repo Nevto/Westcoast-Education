@@ -17,9 +17,16 @@ const createCourseImage = (imageUrl, id) => {
 };
 
 const createCourseInfo = (course) => {
+    const container = document.createElement('div');
     const span = document.createElement('span');
-    span.innerText = `${course.title} ${course.courseNumber} ${course.description} ${course.accessibility} Course start: ${course.date} Duration: ${course.months} months`;
-    return span;
+    const h2 = document.createElement('h2')
+    h2.innerText = `${course.title}`
+    span.innerText = `${course.description} ${course.courseNumber} Available as: ${course.accessibility} Course start: ${course.date} Duration: ${course.months} months`;
+
+    container.appendChild(h2);
+    container.appendChild(span);
+
+    return container
 }
 
 const createBookCourse = (courseTitle, id, courseNumber) => {

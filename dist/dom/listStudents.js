@@ -18,9 +18,14 @@ export function listStudents(students) {
         return div;
     };
     const createStudentInfo = (student) => {
+        const div = document.createElement('div');
         const span = document.createElement('span');
-        span.innerText = `${student.studentName} ${student.address} ${student.email} ${student.mobileNumber} ${student.courseTitle}`;
-        return span;
+        const h2 = document.createElement('h2');
+        span.innerText = `${student.studentName} ${student.address} ${student.email} ${student.mobileNumber}`;
+        h2.innerText = `${student.courseTitle}`;
+        div.appendChild(h2);
+        div.appendChild(span);
+        return div;
     };
     const createStudentImage = (img, id) => {
         const image = document.createElement('img');

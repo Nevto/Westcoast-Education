@@ -33,36 +33,51 @@ body {
     gap: 10px;
 }
 
+.coure-image div {
+    margin: 3px;
+}
+
 .course-image {
     display: flex;
     flex-direction: column;
     width: calc(50% - 10px);
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.75);
+    padding: 10px;
 }
 
 .course-image img {
     width: 300px;
     height: 300px;
-    padding: 10px;
     gap: 10px;
     border-radius: 15px;
+
 }
 
 
-.course-image span {
-    padding: 5px;
-    
+// .course-image span {
+
+
+// }
+
+.course-image h2 {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    margin-right: 1.5rem;
+    bottom: 18rem;
+
 }
 
 .bookButton {
     width: 10rem;
     height: 2rem;
-    background-color: rgba(10, 246, 231, 0.2);;
+    background-color: rgba(10, 246, 231, 0.2);
+    ;
     color: black;
     position: relative;
     bottom: 0;
-    align-self:flex-end;
+    align-self: flex-end;
     margin: 3px;
     border-radius: 15px;
     font-weight: bolder;
@@ -72,16 +87,20 @@ body {
 
 .header {
     display: flex;
-    background-color: #CDD8BB;
+    background-color: rgb(205, 216, 187, 0.7);
     position: sticky;
     align-items: center;
     justify-content: center;
     top: 0;
     width: 100%;
     height: 4rem;
-    
+
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
 .menu {
     position: absolute;
     display: flex;
@@ -112,7 +131,7 @@ body {
     color: white;
     padding: 3px;
     border-radius: 15px;
-    
+
 }
 
 .formData h2 {
@@ -121,6 +140,17 @@ body {
     align-self: center;
 }
 
+// @media only screen and (max-width: 1600px) {
+//     .course-image h2 {
+//         right: 6%;
+//     }
+// }
+
+// @media only screen and (max-width: 1400px) {
+//     .course-image h2 {
+//         right: 0;
+//     }
+// }
 
 @media only screen and (max-width: 1024px) {
 
@@ -131,16 +161,24 @@ body {
     #courseGallery div {
         flex-direction: column;
         flex-wrap: nowrap;
-        width: 100vh;
+        width: 80vw;
     }
 
     .course-image {
-        width: 80vh;
+        width: 60vw;
         justify-content: space-between;
     }
 
     .course-image img {
         width: 50vw;
         height: 50vh;
+    }
+
+    .course-image h2 {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        bottom: 0;
+        right: 0;
     }
 }
