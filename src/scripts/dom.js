@@ -5,7 +5,7 @@ const createCourseCard = (course) => {
     div.appendChild(createCourseInfo(course))
     div.appendChild(createBookCourse(course.title, course.id))
     return div;
-  
+
 }
 
 const createCourseImage = (imageUrl, id) => {
@@ -20,9 +20,16 @@ const createCourseInfo = (course) => {
     const container = document.createElement('div');
     const span = document.createElement('span');
     const h2 = document.createElement('h2')
+    const spanDe = document.createElement('span')
+    container.classList.add('textContainer')
+    spanDe.classList.add('description')
     h2.innerText = `${course.title}`
-    span.innerText = `${course.description} ${course.courseNumber} Available as: ${course.accessibility} Course start: ${course.date} Duration: ${course.months} months`;
 
+    span.innerHTML = `<div class="twoColumn"><div><h4>Course Number:</h4> <p>${course.courseNumber}</p> <h4>Available as:</h4> <p>${course.accessibility}</p></div>
+     <div><h4>Course start:</h4> <p>${course.date}</p> <h4>Duration:</h4> <p>${course.months} months</p></div></div>`;
+    spanDe.innerHTML = `<h3>Description</h3> <p>${course.description}</p>`
+
+    container.appendChild(spanDe)
     container.appendChild(h2);
     container.appendChild(span);
 
@@ -35,7 +42,7 @@ const createBookCourse = (courseTitle, id, courseNumber) => {
     button.setAttribute('title', `${courseTitle}`)
     button.setAttribute('id', id)
     button.setAttribute('courseNumber', `${courseNumber}`)
-    
+
     button.innerText = 'Book Course'
     button.addEventListener('click', () => {
         alert(`titel är  ${courseTitle} & id är ${id}`);
@@ -121,4 +128,4 @@ const addCourseImage = (image) => {
 }
 
 
-export { createCourseCard, createCourseImage, addCourseImage, createLogInForm, createBookCourse, createNewCourse}
+export { createCourseCard, createCourseImage, addCourseImage, createLogInForm, createBookCourse, createNewCourse }

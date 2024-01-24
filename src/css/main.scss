@@ -11,6 +11,13 @@ body {
     background-size: cover;
 }
 
+.twoColumn {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
 .course-image {
     background-color: #f5f5dc;
 }
@@ -55,10 +62,11 @@ body {
 }
 
 
-// .course-image span {
-
-
-// }
+.course-image p {
+    display: flex;
+    flex-direction: column;
+    
+}
 
 .course-image h2 {
     display: flex;
@@ -68,6 +76,13 @@ body {
     bottom: 18rem;
 
 }
+
+.description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
 
 .bookButton {
     width: 10rem;
@@ -84,6 +99,7 @@ body {
     font-size: large;
     cursor: pointer;
 }
+
 
 .header {
     display: flex;
@@ -114,7 +130,6 @@ a {
     display: flex;
     gap: 1rem;
     cursor: pointer;
-    // position: relative;
     justify-content: flex-end;
     list-style: none;
 }
@@ -140,17 +155,6 @@ a {
     align-self: center;
 }
 
-// @media only screen and (max-width: 1600px) {
-//     .course-image h2 {
-//         right: 6%;
-//     }
-// }
-
-// @media only screen and (max-width: 1400px) {
-//     .course-image h2 {
-//         right: 0;
-//     }
-// }
 
 @media only screen and (max-width: 1024px) {
 
