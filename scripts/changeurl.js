@@ -20,12 +20,19 @@ const navigation = () => {
         goToPage('index.html')
     })
 
+    adminNav('adminStudentView')
 }
 
-const adminNav = () => {
-    const adminView = document.getElementById('adminStudentView')
-    adminView.addEventListener('click', () => {
-        goToPage('adminCourses.html')
-    })
+const adminNav = (targetElementId) => {
+    const adminView = document.getElementById(targetElementId);
+
+    
+    if (adminView) {
+        adminView.addEventListener('click', () => {
+            goToPage('adminCourses.html')
+        })
+    }
 }
+
+
 export {navigation, adminNav}

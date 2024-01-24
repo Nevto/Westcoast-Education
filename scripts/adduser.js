@@ -81,6 +81,4 @@ const addCourseToJson = async (form) => {
     console.log("it should  work now", saveCourse);
 }
 
-adminNav()
-
 export { saveStudentHandler, addStudentToJson, addCourseToJson }

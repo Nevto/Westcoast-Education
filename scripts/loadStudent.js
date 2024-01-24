@@ -1,6 +1,6 @@
 import HttpClient from "./http.js"
 import { createStudentCard, addCourseImage, createStudentImage } from "./dom.js";
-import { adminNav,} from "./changeUrl.js";
+import { adminNav, navigation,} from "./changeUrl.js";
 
 const gallery = document.querySelector('#courseGallery')
 
@@ -37,7 +37,7 @@ const initPage = async () => {
 
     
 
-    adminNav()
+    navigation()
     
 document.addEventListener('DOMContentLoaded', initPage);
 

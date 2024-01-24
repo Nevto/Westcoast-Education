@@ -1,8 +1,11 @@
+import { adminNav, navigation } from "./changeUrl.js";
 import { createStudentCard } from "./dom.js";
 import HttpClient from "./http.js";
 import { loadStudentCourses } from "./loadStudent.js";
 
-const initPage = ()  => {}
+const initPage = ()  => {
+    adminNav()
+}
 
 const form = document.getElementById('searchForm');
 form.addEventListener('submit', async (e) => {
@@ -13,7 +16,7 @@ form.addEventListener('submit', async (e) => {
     const students = document.querySelectorAll('.course-image')
 
     students.forEach((student) => {
-        const courseTitle = (student.courseTitle || '').toLowerCase();
+        const courseTitle = (student.dataset.courseTitle || '').toLowerCase();
         if(courseTitle.includes(searchTerm) || searchTerm === '') {
             student.style.display = ''
         }else {
@@ -28,5 +31,7 @@ function clearResults() {
 
     document.innerHTML = '';
 }
+
+navigation()
 
 document.addEventListener('DOMContentLoaded', initPage)
