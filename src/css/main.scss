@@ -1,12 +1,17 @@
 @import "reset.scss";
 @import "gallery.scss";
 
+
 .title {
     cursor: pointer;
 }
 
+body {
+    background-color: #ECE1D3;
+}
+
 .course-image {
-    background-color: beige;
+    background-color: #f5f5dc;
 }
 
 #container {
@@ -60,7 +65,7 @@
 
 .header {
     display: flex;
-    background-color: burlywood;
+    background-color: #CDD8BB;
     position: sticky;
     align-items: center;
     justify-content: center;
@@ -108,6 +113,7 @@
     margin-bottom: 2rem;
     align-self: center;
 }
+
 
 @media only screen and (max-width: 1024px) {
 
