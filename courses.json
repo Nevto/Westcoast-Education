@@ -167,6 +167,24 @@
       "courseTitle": "Artificial Intelligence in Business",
       "img": "assets/students/Alv.jpg",
       "id": 4
+    },
+    {
+      "studentName": "Lilly",
+      "address": "lilly 23 road",
+      "email": "lilly@lilly.com",
+      "mobileNumber": "444 222 999",
+      "courseTitle": "Blockchain Dev Course",
+      "img": "assets/students/Placeholder.jpg",
+      "id": 5
+    },
+    {
+      "studentName": "Roger",
+      "address": "That road 99",
+      "email": "roger@that.com",
+      "mobileNumber": "999 220 101",
+      "courseTitle": "Blockchain Dev Course",
+      "img": "assets/students/Placeholder.jpg",
+      "id": 6
     }
   ]
 }

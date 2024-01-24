@@ -53,7 +53,8 @@ const saveStudentHandler = (form) => {
         address: form.elements.Address.value,
         email: form.elements.email.value,
         mobileNumber: form.elements.mobileNumber.value,
-        courseTitle: form.elements.courseTitle.value
+        courseTitle: form.elements.courseTitle.value,
+        img: "assets/students/Placeholder.jpg"
     };
     console.log('Form data submitted:', formData);
     // addStudent(formData)
