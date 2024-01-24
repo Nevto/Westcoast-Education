@@ -1,27 +1,6 @@
 import { adminNav } from "./changeUrl.js";
 import HttpClient from "./http.js";
 
-// const addStudent = (formData) => {
-//     //checks if the storage feature is supported by the current webbrowser
-//     if (typeof Storage !== 'undefined') {
-//         // looks to see if any students exist in the localstorage, and if it doesn't return an empty array
-//         try {
-//             const savedStudent = JSON.parse(localStorage.getItem('students')) || []
-
-//             savedStudent.push(formData)
-
-//             localStorage.setItem('students', JSON.stringify(savedStudent));
-
-//             alert('Form data saved sucessfully')
-//         } catch (error) {
-//             console.log('something went horribly wrong', error);
-//         }
-
-//     } else {
-//         alert('It seems like your browser may not support local storage =)')
-//     }
-// }
-
 const addStudentToServer = async (formData) => {
     try {
         const url = 'http://localhost:3000/students';
@@ -36,7 +15,7 @@ const addStudentToServer = async (formData) => {
 
 const saveCourseToServer = async (formData) => {
     try {
-        const url = 'http://localhost:3000/newCourses';
+        const url = 'http://localhost:3000/courses';
         const http = new HttpClient(url);
         const result = await http.add(formData);
         alert('Form data saved successfully to server');
@@ -46,7 +25,7 @@ const saveCourseToServer = async (formData) => {
     }
 }
 
-//takes my form data and stores it local storage
+//takes my form data and handles it
 const saveStudentHandler = (form) => {
     const formData = {
         studentName: form.elements.studentName.value,
@@ -57,16 +36,19 @@ const saveStudentHandler = (form) => {
         img: "assets/students/Placeholder.jpg"
     };
     console.log('Form data submitted:', formData);
-    // addStudent(formData)
     addStudentToServer(formData)
 };
 
 const saveNewCourseHandler = (form) => {
     const newCourseData = {
-        courseTitle: form.elements.courseTitle.value,
         courseNumber: form.elements.courseNumber.value,
+        title: form.elements.title.value,
+        description: form.elements.description.value,
         months: form.elements.months.value,
-        courseCost: form.elements.courseCost.value
+        accessibility: form.elements.accessibility.value,
+        price: form.elements.courseCost.value,
+        imageUrl: "assets/images/Placeholdercourse.jpg",
+        date: form.elements.date.value
     }
     console.log('New course submitted', newCourseData);
     saveCourseToServer(newCourseData)

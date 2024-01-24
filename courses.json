@@ -8,7 +8,8 @@
       "months": 24,
       "accessibility": "Distance or Onsite",
       "imageUrl": "assets/images/Blockchain.jpg",
-      "date": "2024-02-20"
+      "date": "2024-02-20",
+      "price": 30000
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "months": 12,
       "accessibility": "On-site",
       "imageUrl": "assets/images/Web Development.jpg",
-      "date": "2024-03-13"
+      "date": "2024-03-13",
+      "price": 30000
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "months": 8,
       "accessibility": "Distance",
       "imageUrl": "assets/images/Data Science.jpg",
-      "date": "2024-03-20"
+      "date": "2024-03-20",
+      "price": 30000
     },
     {
       "id": 4,
@@ -38,7 +41,8 @@
       "months": 6,
       "accessibility": "On-site",
       "imageUrl": "assets/images/Graphic Design Course.jpg",
-      "date": "2024-03-27"
+      "date": "2024-03-27",
+      "price": 30000
     },
     {
       "id": 5,
@@ -48,7 +52,8 @@
       "months": 9,
       "accessibility": "Distance",
       "imageUrl": "assets/images/Mobile App Development.jpg",
-      "date": "2024-04-03"
+      "date": "2024-04-03",
+      "price": 30000
     },
     {
       "id": 6,
@@ -58,7 +63,8 @@
       "months": 12,
       "accessibility": "On-site",
       "imageUrl": "assets/images/Photography Basics.jpg",
-      "date": "2024-04-10"
+      "date": "2024-04-10",
+      "price": 30000
     },
     {
       "id": 7,
@@ -68,7 +74,8 @@
       "months": 2,
       "accessibility": "Distance",
       "imageUrl": "assets/images/Business Management Essentials.jpg",
-      "date": "2024-04-17"
+      "date": "2024-04-17",
+      "price": 30000
     },
     {
       "id": 8,
@@ -78,7 +85,8 @@
       "months": 24,
       "accessibility": "On-site or Distance",
       "imageUrl": "assets/images/Artificial Intelligence in Business (1).jpg",
-      "date": "2024-04-24"
+      "date": "2024-04-24",
+      "price": 30000
     },
     {
       "id": 9,
@@ -88,7 +96,8 @@
       "months": 12,
       "accessibility": "Distance",
       "imageUrl": "assets/images/Digital Marketing Strategies.jpg",
-      "date": "2024-05-01"
+      "date": "2024-05-01",
+      "price": 30000
     },
     {
       "id": 10,
@@ -98,37 +107,41 @@
       "months": 6,
       "accessibility": "On-site",
       "imageUrl": "assets/images/UXUI Design Principles.jpg",
-      "date": "2024-09-01"
-    }
-  ],
-  "newCourses": [
-    {
-      "id": 1,
-      "courseTitle": "Javascript for proffesionals",
-      "courseNumber": 1,
-      "duration": 12,
+      "date": "2024-09-01",
       "price": 30000
     },
     {
-      "courseTitle": "Blockchain for dummies",
       "courseNumber": "13",
+      "title": "Blockchain",
+      "description": "AWdwad",
       "months": "24",
-      "courseCost": "3000",
-      "id": 2
+      "accessibility": "Distance",
+      "price": "3000",
+      "imageUrl": "assets/images/Placeholdercourse.jpg",
+      "date": "2244-03-16",
+      "id": 11
     },
     {
-      "courseTitle": "Javascript for pros",
-      "courseNumber": "13",
+      "courseNumber": "44",
+      "title": "Angular",
+      "description": "Deep down in the Angular Rabbit hole",
       "months": "36",
-      "courseCost": "3000",
-      "id": 3
+      "accessibility": "Distance",
+      "price": "3000",
+      "imageUrl": "assets/images/Placeholdercourse.jpg",
+      "date": "2025/08",
+      "id": 12
     },
     {
-      "courseTitle": "Blockchain for pros",
-      "courseNumber": "13",
-      "months": "36",
-      "courseCost": "3000",
-      "id": 4
+      "courseNumber": "99",
+      "title": "React",
+      "description": "Deep dive into the wonders of React",
+      "months": "12",
+      "accessibility": "On-site",
+      "price": "30000",
+      "imageUrl": "assets/images/Placeholdercourse.jpg",
+      "date": "2024/03/01",
+      "id": 13
     }
   ],
   "students": [
@@ -185,6 +198,33 @@
       "courseTitle": "Blockchain Dev Course",
       "img": "assets/students/Placeholder.jpg",
       "id": 6
+    },
+    {
+      "studentName": "Gilbert",
+      "address": "den store 25",
+      "email": "gilbert@gilbert",
+      "mobileNumber": "333 999 222",
+      "courseTitle": "Graphic Design Course",
+      "img": "assets/students/Placeholder.jpg",
+      "id": 7
+    },
+    {
+      "studentName": "Artificial",
+      "address": "Robot road 25",
+      "email": "arti@arti.com",
+      "mobileNumber": "333 949 933",
+      "courseTitle": "Artificial Intelligence in Business",
+      "img": "assets/students/Placeholder.jpg",
+      "id": 8
+    },
+    {
+      "studentName": "Wille",
+      "address": "Wille willevägen 23",
+      "email": "wille@wille.com",
+      "mobileNumber": "333 999 333",
+      "courseTitle": "Blockchain Dev Course",
+      "img": "assets/students/Placeholder.jpg",
+      "id": 9
     }
   ]
 }

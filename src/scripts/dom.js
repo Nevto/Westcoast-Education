@@ -8,33 +8,7 @@ const createCourseCard = (course) => {
   
 }
 
-const createStudentCard = (student) => {
-    const div = document.createElement('div');
-    div.classList.add('course-image')
-    div.dataset.courseTitle = student.courseTitle;
-    div.appendChild(createStudentImage(student.img, student.id))
-    div.appendChild(createStudentInfo(student))
-    return div;
-  
-}
-
-const createStudentInfo = (students) => {
-    const span = document.createElement('span');
-    span.innerText = `${students.studentName} ${students.address} ${students.email} ${students.mobileNumber} ${students.courseTitle}`
-    return span;
-}
-
-const createStudentImage = (img, id) => {
-    // console.log(imageUrl);
-    const image = document.createElement('img');
-    image.setAttribute('src', `${img}`);
-    image.setAttribute('id', id);
-
-    return image;
-};
-
 const createCourseImage = (imageUrl, id) => {
-    // console.log(imageUrl);
     const image = document.createElement('img');
     image.setAttribute('src', `${imageUrl}`);
     image.setAttribute('id', id);
@@ -65,7 +39,6 @@ const createBookCourse = (courseTitle, id, courseNumber) => {
 const createLogInForm = (course) => {
     const formData = document.createElement('div') // kundnamn, Faktureringsadress, e-post, mobilnummer
     console.log(course);
-    // const courseTitle = `${course.title}`
     formData.innerHTML = `
     <section class= "formData">
     <h2>${course}</h2>
@@ -99,16 +72,25 @@ const createNewCourse = () => {
     <section class= "newCourseForm" id = "addCourse">
     <h2>"Here you may add new courses!"</h2>
     <form>
-    <label for="CourseTitle">Course Title:</label>
-    <input type="text" id="courseTitle" name="courseTitle" placeholder="Enter name of new course" required>
-    
     <label for="courseNumber">Course Number</label>
     <input type="text" id="courseNumber" name="courseNumber" placeholder="Enter new Coursenumber" required>
+
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" placeholder="Enter name of new course" required>
+    
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" placeholder="Enter a course description" required>
     
     <label for="months">Duration:</label>
     <input type="text" id="months" name="months" placeholder="Enter how many months the course will be" required>
     
-    <label for="courseCost">Course Cost:</label>
+    <label for="accessibility">Accessibility</label>
+    <input type="text" id="accessibility" name="accessibility" placeholder="Distance or On-site?" required>
+   
+    <label for="date">Date:</label>
+    <input type="text" id="date" name="date" placeholder="Enter course start date" required>
+
+    <label for="courseCost">Price:</label>
     <input type="text" id="courseCost" name="courseCost" placeholder="Price of Course" required>
     
     <button class="bookButton" type="submit">Create new Course</button>
@@ -132,4 +114,4 @@ const addCourseImage = (image) => {
 }
 
 
-export { createCourseCard, createCourseImage, addCourseImage, createLogInForm, createBookCourse, createNewCourse, createStudentCard, createStudentImage }
+export { createCourseCard, createCourseImage, addCourseImage, createLogInForm, createBookCourse, createNewCourse}
