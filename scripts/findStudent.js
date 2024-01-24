@@ -1,10 +1,8 @@
-import { adminNav, navigation } from "./changeUrl.js";
-import { createStudentCard } from "./dom.js";
-import HttpClient from "./http.js";
-import { loadStudentCourses } from "./loadStudent.js";
+import { navigation } from "./changeUrl.js";
+
 
 const initPage = ()  => {
-    adminNav()
+    navigation()
 }
 
 const form = document.getElementById('searchForm');

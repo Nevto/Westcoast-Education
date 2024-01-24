@@ -27,16 +27,16 @@ const initPage = async () => {
       try {
         const students = await http.get()
         return students;
+
       } catch (error) {
+
         console.log("couldn't load student with respective courses:", error);
+
         return []
       }
+
     }
-
-
-
     
-
     navigation()
     
 document.addEventListener('DOMContentLoaded', initPage);

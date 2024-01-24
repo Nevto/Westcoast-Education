@@ -50,7 +50,7 @@ const saveCourseToServer = async (formData) => {
 const saveStudentHandler = (form) => {
     const formData = {
         studentName: form.elements.studentName.value,
-        address: form.elements.Address.value,
+        address: form.elements.address.value,
         email: form.elements.email.value,
         mobileNumber: form.elements.mobileNumber.value,
         courseTitle: form.elements.courseTitle.value,

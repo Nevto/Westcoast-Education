@@ -20,7 +20,7 @@ const createStudentCard = (student) => {
 
 const createStudentInfo = (students) => {
     const span = document.createElement('span');
-    span.innerText = `${students.studentName} ${students.adress} ${students.email} ${students.mobileNumber} ${students.courseTitle}`
+    span.innerText = `${students.studentName} ${students.address} ${students.email} ${students.mobileNumber} ${students.courseTitle}`
     return span;
 }
 
@@ -73,8 +73,8 @@ const createLogInForm = (course) => {
     <label for="studentName">Student Name:</label>
     <input type="text" id="studentName" name="studentName" placeholder="Enter your name" required>
     
-    <label for="Adress">Address:</label>
-    <textarea id="Address" name="Address" placeholder="Enter address" required></textarea>
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" placeholder="Enter address" required></textarea>
     
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" placeholder="Enter email address" required>
