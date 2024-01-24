@@ -7,7 +7,8 @@
 }
 
 body {
-    background-color: #ECE1D3;
+    background-image: url('/src/assets/backgroundImages/maldives-1993704_1920.jpg');
+    background-size: cover;
 }
 
 .course-image {
@@ -37,6 +38,7 @@ body {
     flex-direction: column;
     width: calc(50% - 10px);
     border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 .course-image img {
@@ -47,20 +49,25 @@ body {
     border-radius: 15px;
 }
 
+
 .course-image span {
     padding: 5px;
+    
 }
 
 .bookButton {
     width: 10rem;
     height: 2rem;
-    background-color: black;
-    color: white;
+    background-color: rgba(10, 246, 231, 0.2);;
+    color: black;
     position: relative;
     bottom: 0;
     align-self:flex-end;
     margin: 3px;
     border-radius: 15px;
+    font-weight: bolder;
+    font-size: large;
+    cursor: pointer;
 }
 
 .header {
