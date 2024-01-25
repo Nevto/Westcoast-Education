@@ -84,7 +84,7 @@ const createNewCourse = () => {
 
     newCourse.innerHTML = `
     <section class= "newCourseForm" id = "addCourse">
-    <h2>"Here you may add new courses!"</h2>
+    <h2>Here you may add new courses!</h2>
     <form>
     <label for="courseNumber">Course Number</label>
     <input type="text" id="courseNumber" name="courseNumber" placeholder="Enter new Coursenumber" required>
