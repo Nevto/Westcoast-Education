@@ -73,6 +73,8 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     margin-left: 2rem;
+    
+
 }
 
 .description {
@@ -83,10 +85,9 @@ body {
 
 
 .bookButton {
-    width: 14rem;
-    height: 2rem;
+    min-width: 10vw;
+    min-height: 2rem;
     background-color: rgba(10, 246, 231, 0.2);
-    ;
     color: black;
     position: relative;
     bottom: 0;
@@ -153,8 +154,27 @@ a {
     align-self: center;
 }
 
+@media only screen and (max-width: 1560px) {
+    .twoColumn {
+        gap: 1rem;
+    }
 
-@media only screen and (max-width: 1024px) {
+    .bookButton {
+        min-width: 10rem;
+    }
+
+    .textContainer {
+        margin: auto;
+        padding-left: 5pxpx;
+    }
+
+    .course-image {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 1224px) {
 
     #container {
         width: 100vw;
@@ -182,5 +202,9 @@ a {
         justify-content: center;
         bottom: 0;
         right: 0;
+    }
+
+    .textContainer {
+        margin: auto;
     }
 }

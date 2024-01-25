@@ -21,7 +21,8 @@ export function listStudents(students) {
         const div = document.createElement('div');
         const span = document.createElement('span');
         const h2 = document.createElement('h2');
-        span.innerText = `${student.studentName} ${student.address} ${student.email} ${student.mobileNumber}`;
+        div.classList.add('textContainer');
+        span.innerHTML = `<h4>Student name</h4><p>${student.studentName}</p></h4> <h4>Adress</h4>${student.address} <h4>Email</h4>${student.email} <h4>Phone</h4>${student.mobileNumber}`;
         h2.innerText = `${student.courseTitle}`;
         div.appendChild(h2);
         div.appendChild(span);
