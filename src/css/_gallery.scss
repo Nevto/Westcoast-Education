@@ -1,19 +1,97 @@
+.title {
+    cursor: pointer;
+}
+
+body {
+    background-image: url('/src/assets/backgroundImages/maldives-1993704_1920.jpg');
+    background-size: cover;
+}
+
+.twoColumn {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.course-image {
+    background-color: #f5f5dc;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#courseGallery {
+    display: flex;
+    height: 300px;
+    width: 80vw;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 10px;
+}
+
+.coure-image div {
+    margin: 3px;
+}
+
+.course-image {
+    display: flex;
+    // flex-direction: column;
+    width: calc(50% - 10px);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 10px;
+}
+
+.course-image img {
+    width: 300px;
+    height: 300px;
+    gap: 10px;
+    border-radius: 15px;
+
+}
 
 
-.newCourseForm {
+.course-image p {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 35vw;
     
 }
 
-.newCourseForm form {
+.textContainer {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    justify-content: space-evenly;
+    margin-left: 2rem;
+    
+
 }
 
-.bookButton {
-    align-self: center;
+.description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }
+
+
+.bookButton {
+    min-width: 10vw;
+    min-height: 2rem;
+    background-color: rgba(10, 246, 231, 0.2);
+    color: black;
+    position: relative;
+    bottom: 0;
+    align-self: flex-end;
+    margin: 3px;
+    border-radius: 15px;
+    font-weight: bolder;
+    font-size: large;
+    cursor: pointer;
+}
+

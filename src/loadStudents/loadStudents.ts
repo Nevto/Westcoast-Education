@@ -1,7 +1,7 @@
 import HttpClient from "../Http/http.js";
 import { listStudents } from "../dom/listStudents.js";
 import { Student } from "../models/Students.js";
-const gallery: HTMLElement | null = document.querySelector('#courseGallery')!;
+
 
 
 const initPage = async (): Promise<void> => {
@@ -26,7 +26,5 @@ const loadStudentCourses = async (searchTerm: string = ''): Promise<any[]> => {
     return [];
   }
 };
-
-export default loadStudentCourses;
 
 document.addEventListener('DOMContentLoaded', initPage)

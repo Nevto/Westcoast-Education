@@ -1,0 +1,54 @@
+@media only screen and (max-width: 1560px) {
+    .twoColumn {
+        gap: 1rem;
+    }
+
+    .bookButton {
+        min-width: 10rem;
+    }
+
+    .textContainer {
+        margin: auto;
+        padding-left: 5pxpx;
+    }
+
+    .course-image {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 1224px) {
+
+    #container {
+        width: 100vw;
+    }
+
+    #courseGallery div {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 80vw;
+    }
+
+    .course-image {
+        width: 60vw;
+        justify-content: space-between;
+    }
+
+    .course-image img {
+        width: 50vw;
+        height: 50vh;
+    }
+
+    .course-image h2 {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        bottom: 0;
+        right: 0;
+    }
+
+    .textContainer {
+        margin: auto;
+    }
+}

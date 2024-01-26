@@ -9,7 +9,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import HttpClient from "../Http/http.js";
 import { listStudents } from "../dom/listStudents.js";
-const gallery = document.querySelector('#courseGallery');
 const initPage = () => __awaiter(void 0, void 0, void 0, function* () {
     const students = yield loadStudentCourses();
     listStudents(students);
@@ -28,5 +27,4 @@ const loadStudentCourses = (searchTerm = '') => __awaiter(void 0, void 0, void 0
         return [];
     }
 });
-export default loadStudentCourses;
 document.addEventListener('DOMContentLoaded', initPage);

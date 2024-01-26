@@ -7,6 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+// Creating my card body 
 export function listStudents(students) {
     const cardBody = document.querySelector('#courseGallery');
     const createStudentCard = (student) => {
@@ -40,14 +41,16 @@ export function listStudents(students) {
     }
     setupFormEventListener();
 }
+// Finds my form and adds an eventlistener
 function setupFormEventListener() {
     const form = document.querySelector('form');
     if (form) {
         form.addEventListener('submit', (e) => __awaiter(this, void 0, void 0, function* () {
-            console.log("i have been pressed");
             e.preventDefault();
             const searchTerm = document.getElementById('courseTitle').value.toLowerCase();
             const students = document.querySelectorAll('.course-image');
+            // checks every student and see if they have the correct course title/letters in their dataset according to what you typed in the form
+            // if they do display them, and hide the rest of the students
             students.forEach((student) => {
                 const courseTitle = (student.dataset.courseTitle || '').toLowerCase();
                 if (courseTitle.includes(searchTerm) || searchTerm === '') {

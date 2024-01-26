@@ -1,5 +1,7 @@
 import { Student } from "../models/Students";
 
+// Creating my card body 
+
 export function listStudents (students: Student[]):void {
     const cardBody = document.querySelector<HTMLDivElement>('#courseGallery')!
     
@@ -41,16 +43,18 @@ export function listStudents (students: Student[]):void {
 
     setupFormEventListener()
 }
+// Finds my form and adds an eventlistener
 function setupFormEventListener(): void {
     const form = document.querySelector('form');
     if (form) {
         form.addEventListener('submit', async (e: Event) => {
-            console.log("i have been pressed");
             e.preventDefault();
-    
+            
             const searchTerm: string = (document.getElementById('courseTitle') as HTMLInputElement).value.toLowerCase();
             const students: NodeListOf<HTMLDivElement> = document.querySelectorAll('.course-image');
-    
+
+    // checks every student and see if they have the correct course title/letters in their dataset according to what you typed in the form
+    // if they do display them, and hide the rest of the students
             students.forEach((student) => {
                 const courseTitle: string = (student.dataset.courseTitle || '').toLowerCase();
                 if (courseTitle.includes(searchTerm) || searchTerm === '') {

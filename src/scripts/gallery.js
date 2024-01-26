@@ -1,10 +1,12 @@
-import { addCourseImage, createCourseCard, createLogInForm, createBookCourse } from "./dom.js";
+import { addCourseImage, createCourseCard, createLogInForm} from "./dom.js";
 import HttpClient from "./http.js";
-import { addStudentToJson, saveStudentHandler } from "./addUser.js";
+import { addStudentToJson } from "./addUser.js";
 import { navigation } from "./changeUrl.js";
+import { cancelLogInForm} from "./updateUi.js";
 
 
 const gallery = document.querySelector('#courseGallery')
+let isFormOpen = false
 
 
 async function initpage() {
@@ -17,14 +19,18 @@ async function initpage() {
     const images = document.querySelectorAll('.course-image img')
     addCourseImage(images);
 
+    
     const logInButtons = document.querySelectorAll('.bookButton');
-    console.log(logInButtons);
     logInButtons.forEach((logInButton) => {
         logInButton.addEventListener('click', () => {
-            const courseTitle = logInButton.getAttribute('title');
-            // Makes the form appear in the right container
             const container = logInButton.closest('.course-image')
-            showLogInForm(courseTitle, container);
+            const courseTitle = logInButton.getAttribute('title');
+            
+            if (!isFormOpen) {
+                showLogInForm(courseTitle, container);
+                isFormOpen = true;
+            }
+    
         });
     });
 }
@@ -36,33 +42,44 @@ const loadCourses = async () => {
     return courses;
 }
 
+function hideForm() {
+    const form = document.querySelector('.formData');
+    if (form) {
+        form.style.display = "none";
+        isFormOpen = false;
+    }
+}
+
 
 const showLogInForm = async (course, container) => {
-   const logInForm = createLogInForm(course)
-   container.appendChild(logInForm)
+    hideForm()
 
-   const form = logInForm.querySelector('form')
-   form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    addStudentToJson(form)
-   })
+    const logInForm = createLogInForm(course)
+    container.appendChild(logInForm)
+    const form = logInForm.querySelector('form')
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        addStudentToJson(form)
+    })
+
+    
+
+    const cancelButton = logInForm.querySelector('.cancel');
+    if (cancelButton) {
+        cancelButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            cancelLogInForm(logInForm);
+            isFormOpen = false
+            
+        });
+
+    }
 }
+
+
 
 
 navigation()
 
-
-console.log(showLogInForm);
 document.addEventListener('DOMContentLoaded', initpage)
 
-
-// courses.forEach((course) => {
-//     console.log('image source', courses.imageUrl);
-//     gallery.appendChild(createCourseCard(courses.title, courses.id))
-// })
-
-// const images = document.querySelectorAll('.imageGallery')
-// addCourseImage(images)
-
-
-// console.log(courses);

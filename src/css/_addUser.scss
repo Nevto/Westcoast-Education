@@ -1,18 +1,28 @@
 .newCourseForm {
     position: relative;
-     top: 3rem;
-     background-color: rgba(205, 216, 187, 0.891);
-     border-radius: 15px;
-     gap: 10px;
-    //  font-weight: bold;
-     padding: 10px;
+    top: 3rem;
+    background-color: rgba(205, 216, 187, 0.891);
+    border-radius: 15px;
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35vw;
 }
 
 .newCourseForm h2 {
     align-self: center;
+    
+}
+
+.newCourseForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .bookButton {
-//    background-color: rgba(205, 216, 187, 0.891)
     background-color: black;
+    align-self: center;
 }

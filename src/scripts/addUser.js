@@ -1,4 +1,3 @@
-import { adminNav } from "./changeUrl.js";
 import HttpClient from "./http.js";
 
 const addStudentToServer = async (formData) => {
@@ -6,7 +5,7 @@ const addStudentToServer = async (formData) => {
         const url = 'http://localhost:3000/students';
         const http = new HttpClient(url);
         const result = await http.add(formData);
-        alert('Form data saved successfully to server');
+        alert('Thank you for booking your first course! Your new life begins now!');
         return result
     } catch (error) {
         console.log('Something went wrong when saving to the server', error);
@@ -18,7 +17,7 @@ const saveCourseToServer = async (formData) => {
         const url = 'http://localhost:3000/courses';
         const http = new HttpClient(url);
         const result = await http.add(formData);
-        alert('Form data saved successfully to server');
+        alert('You just created a course, congratulations! WestCoast Education admires your hard work!');
         return result
     } catch (error) {
         console.log('Something went wrong when saving to the server', error);
@@ -35,7 +34,6 @@ const saveStudentHandler = (form) => {
         courseTitle: form.elements.courseTitle.value,
         img: "assets/students/Placeholder.jpg"
     };
-    console.log('Form data submitted:', formData);
     addStudentToServer(formData)
 };
 
@@ -56,12 +54,10 @@ const saveNewCourseHandler = (form) => {
 
 const addStudentToJson = async (form) => {
     const data = saveStudentHandler(form);
-    console.log('everything is done', data);
 }
 
 const addCourseToJson = async (form) => {
     const saveCourse = saveNewCourseHandler(form)
-    console.log("it should  work now", saveCourse);
 }
 
 export { saveStudentHandler, addStudentToJson, addCourseToJson }

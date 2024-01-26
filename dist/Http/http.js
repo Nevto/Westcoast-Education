@@ -11,7 +11,7 @@ export default class HttpClient {
     constructor(url) {
         this.url = url;
     }
-    // T is used here as generic type Parameter, stands for type and is a placeholder
+    // T is used here as generic type Parameter, stands for type, it could be any letter but T is standard
     get() {
         return __awaiter(this, void 0, void 0, function* () {
             try {

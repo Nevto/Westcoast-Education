@@ -44,15 +44,12 @@ const createBookCourse = (courseTitle, id, courseNumber) => {
     button.setAttribute('courseNumber', `${courseNumber}`)
 
     button.innerText = 'Book Course'
-    button.addEventListener('click', () => {
-        alert(`titel är  ${courseTitle} & id är ${id}`);
-    })
     return button
 }
 
 const createLogInForm = (course) => {
-    const formData = document.createElement('div') // kundnamn, Faktureringsadress, e-post, mobilnummer
-    console.log(course);
+    const formData = document.createElement('div')
+    formData.classList.add('formData')
     formData.innerHTML = `
     <section class= "formData">
     <h2>${course}</h2>
@@ -72,7 +69,8 @@ const createLogInForm = (course) => {
     <label for="courseTitle">Chosen course:</label>
     <input type="text" id="courseTitle" name="courseTitle" placeholder="" value="${course}"  required>
     
-    <button type="submit">Book my course!</button>
+    <button type="submit" class="bookButton">Book my course!</button>
+    <button type="submit" class= "cancel bookButton">Cancel</button>
     </form>
     </section>
     `

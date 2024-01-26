@@ -1,0 +1,42 @@
+// Form popup 
+
+.formData {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: space-evenly;
+    // width: 37.5vw;
+    width: 45vw;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 3px;
+    border-radius: 15px;
+    z-index: 999;
+}
+.formData form{
+display: flex;
+position: relative;
+flex-direction: column;
+align-self: center;
+width: 30vw;
+
+}
+
+.formData form button {
+    background-color: white;
+}
+
+
+.formData h2 {
+    display: flex;
+    margin-bottom: 2rem;
+    align-self: center;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 1260px) {
+    .formData {
+        width: 77.5vw;
+    }
+}

@@ -1,0 +1,20 @@
+.searchForm {
+    // position: absolut;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    left: 3300px;
+    width: 100vw;
+    gap: 3px;
+}
+
+.searchForm input {
+    width: 30vw;
+    background-color: rgba(10, 246, 231, 0.2);
+    font-weight: bolder;
+}
+
+.searchForm input::placeholder {
+    color: rgb(0, 0, 0, 0.66);
+}

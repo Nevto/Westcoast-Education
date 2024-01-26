@@ -5,7 +5,7 @@ export default class HttpClient {
         this.url = url;
     }
 
-    // T is used here as generic type Parameter, stands for type and is a placeholder
+    // T is used here as generic type Parameter, stands for type, it could be any letter but T is standard
     async get<T>(): Promise<T> {
         try {
             const response = await fetch(this.url);

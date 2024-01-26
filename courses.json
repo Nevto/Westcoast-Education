@@ -109,44 +109,11 @@
       "imageUrl": "assets/images/UXUI Design Principles.jpg",
       "date": "2024-09-01",
       "price": 30000
-    },
-    {
-      "courseNumber": "13",
-      "title": "Blockchain",
-      "description": "AWdwad",
-      "months": "24",
-      "accessibility": "Distance",
-      "price": "3000",
-      "imageUrl": "assets/images/Placeholdercourse.jpg",
-      "date": "2244-03-16",
-      "id": 11
-    },
-    {
-      "courseNumber": "44",
-      "title": "Angular",
-      "description": "Deep down in the Angular Rabbit hole",
-      "months": "36",
-      "accessibility": "Distance",
-      "price": "3000",
-      "imageUrl": "assets/images/Placeholdercourse.jpg",
-      "date": "2025/08",
-      "id": 12
-    },
-    {
-      "courseNumber": "99",
-      "title": "React",
-      "description": "Deep dive into the wonders of React",
-      "months": "12",
-      "accessibility": "On-site",
-      "price": "30000",
-      "imageUrl": "assets/images/Placeholdercourse.jpg",
-      "date": "2024/03/01",
-      "id": 13
     }
   ],
   "students": [
     {
-      "studentName": "Benny",
+      "studentName": "Benny Jonsson",
       "address": "Volkswagen street 23",
       "email": "benny@benny.com",
       "mobileNumber": "000 111 222",
@@ -155,7 +122,7 @@
       "id": 1
     },
     {
-      "studentName": "Leonore",
+      "studentName": "Leonore Starfield",
       "address": "LeonoreStreet 5",
       "email": "leonore@leonore",
       "mobileNumber": "222 333 444",
@@ -164,7 +131,7 @@
       "id": 2
     },
     {
-      "studentName": "Sara",
+      "studentName": "Sara Mitsubishi",
       "address": "mitsubishiroad 23",
       "email": "sara@sara.com",
       "mobileNumber": "111 222 333",
@@ -173,7 +140,7 @@
       "id": 3
     },
     {
-      "studentName": "Alv",
+      "studentName": "Alv Alvson",
       "address": "alvstreet 35",
       "email": "alv@alv.com",
       "mobileNumber": "999 888 777",
@@ -182,7 +149,7 @@
       "id": 4
     },
     {
-      "studentName": "Lilly",
+      "studentName": "Lilly Lillson",
       "address": "lilly 23 road",
       "email": "lilly@lilly.com",
       "mobileNumber": "444 222 999",
@@ -191,7 +158,7 @@
       "id": 5
     },
     {
-      "studentName": "Roger",
+      "studentName": "Roger That",
       "address": "That road 99",
       "email": "roger@that.com",
       "mobileNumber": "999 220 101",
@@ -200,7 +167,7 @@
       "id": 6
     },
     {
-      "studentName": "Gilbert",
+      "studentName": "Gilbert den store Karlsson",
       "address": "den store 25",
       "email": "gilbert@gilbert",
       "mobileNumber": "333 999 222",
@@ -209,7 +176,7 @@
       "id": 7
     },
     {
-      "studentName": "Artificial",
+      "studentName": "Artificial Intelligence",
       "address": "Robot road 25",
       "email": "arti@arti.com",
       "mobileNumber": "333 949 933",
@@ -218,7 +185,7 @@
       "id": 8
     },
     {
-      "studentName": "Wille",
+      "studentName": "Wille Jansson",
       "address": "Wille willevägen 23",
       "email": "wille@wille.com",
       "mobileNumber": "333 999 333",
