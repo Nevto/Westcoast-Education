@@ -1,17 +1,18 @@
 const createCourseCard = (course) => {
     const div = document.createElement('div');
     div.classList.add('course-image')
-    div.appendChild(createCourseImage(course.imageUrl, course.id))
+    div.appendChild(createCourseImage(course.imageUrl, course.id, "Beautiful pictures representing this course in a magnificent Ai like way"))
     div.appendChild(createCourseInfo(course))
     div.appendChild(createBookCourse(course.title, course.id))
     return div;
 
 }
 
-const createCourseImage = (imageUrl, id) => {
+const createCourseImage = (imageUrl, id, alt) => {
     const image = document.createElement('img');
     image.setAttribute('src', `${imageUrl}`);
     image.setAttribute('id', id);
+    image.setAttribute('alt', alt)
 
     return image;
 };
@@ -48,7 +49,7 @@ const createBookCourse = (courseTitle, id, courseNumber) => {
 }
 
 const createLogInForm = (course) => {
-    const formData = document.createElement('div')
+    const formData = document.createElement('div') 
     formData.classList.add('formData')
     formData.innerHTML = `
     <section class= "formData">
@@ -113,17 +114,4 @@ const createNewCourse = () => {
 }
 
 
-
-const addCourseImage = (image) => {
-    image.forEach((image) => {
-        const src = image.getAttribute('src')
-        const courseId = image.getAttribute('id')
-
-        image.addEventListener('click', () => {
-            alert(`Kursens id är ${courseId}, kursens bildkälla är: ${src}`);
-        });
-    })
-}
-
-
-export { createCourseCard, createCourseImage, addCourseImage, createLogInForm, createBookCourse, createNewCourse }
+export { createCourseCard, createCourseImage, createLogInForm, createBookCourse, createNewCourse }

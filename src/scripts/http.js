@@ -10,20 +10,20 @@ export default class HttpClient {
 
     async get() {
         try {
-            const response = await fetch(this.#url)   
-            
+            const response = await fetch(this.#url)
+
             if (response.ok) {
                 const result = await response.json();
                 return result;
             } else {
                 throw new Error(`${response.status} ${response.statusText}`)
             }
-            
+
         } catch (error) {
             throw new Error(`Ett fel inträffade i get metoden: ${error}`)
         }
     }
-    
+
     async add(data) {
         try {
             console.log(data);
@@ -41,9 +41,9 @@ export default class HttpClient {
             } else {
                 throw new Error(`${response.status} ${response.statusText}`)
             }
-            
+
         } catch (error) {
-            throw new Error (`Ett fel inträffade i add metoden: ${error}`)
+            throw new Error(`Ett fel inträffade i add metoden: ${error}`)
         }
     }
 }

@@ -1,8 +1,8 @@
-import { addCourseImage, createCourseCard, createLogInForm} from "./dom.js";
+import { createCourseCard, createLogInForm } from "./dom.js";
 import HttpClient from "./http.js";
 import { addStudentToJson } from "./addUser.js";
 import { navigation } from "./changeUrl.js";
-import { cancelLogInForm} from "./updateUi.js";
+import { cancelLogInForm } from "./updateUi.js";
 
 
 const gallery = document.querySelector('#courseGallery')
@@ -16,21 +16,18 @@ async function initpage() {
         gallery.appendChild(createCourseCard(course));
 
     })
-    const images = document.querySelectorAll('.course-image img')
-    addCourseImage(images);
-
     
     const logInButtons = document.querySelectorAll('.bookButton');
     logInButtons.forEach((logInButton) => {
         logInButton.addEventListener('click', () => {
             const container = logInButton.closest('.course-image')
             const courseTitle = logInButton.getAttribute('title');
-            
+
             if (!isFormOpen) {
                 showLogInForm(courseTitle, container);
                 isFormOpen = true;
             }
-    
+
         });
     });
 }
@@ -62,7 +59,7 @@ const showLogInForm = async (course, container) => {
         addStudentToJson(form)
     })
 
-    
+
 
     const cancelButton = logInForm.querySelector('.cancel');
     if (cancelButton) {
@@ -70,7 +67,7 @@ const showLogInForm = async (course, container) => {
             e.preventDefault();
             cancelLogInForm(logInForm);
             isFormOpen = false
-            
+
         });
 
     }

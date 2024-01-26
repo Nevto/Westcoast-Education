@@ -14,7 +14,7 @@ export function listStudents(students) {
         const div = document.createElement('div');
         div.classList.add('course-image');
         div.dataset.courseTitle = student.courseTitle;
-        div.appendChild(createStudentImage(student.img, student.id));
+        div.appendChild(createStudentImage(student.img, student.id, "Beautiful pictures representing our students in a magnificent Ai like way"));
         div.appendChild(createStudentInfo(student));
         return div;
     };
@@ -29,10 +29,11 @@ export function listStudents(students) {
         div.appendChild(span);
         return div;
     };
-    const createStudentImage = (img, id) => {
+    const createStudentImage = (img, id, alt) => {
         const image = document.createElement('img');
         image.setAttribute('src', `${img}`);
         image.setAttribute('id', id);
+        image.setAttribute('alt', alt);
         return image;
     };
     for (let student of students) {
